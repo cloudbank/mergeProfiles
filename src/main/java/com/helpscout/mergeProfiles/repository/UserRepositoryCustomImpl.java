@@ -6,7 +6,7 @@ import javax.persistence.ParameterMode;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
 
-public class UserRepositoryImpl implements UserRepositoryCustom {
+public class UserRepositoryCustomImpl implements UserRepositoryCustom {
   
   @PersistenceContext
   private EntityManager entityManager;
@@ -25,10 +25,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
      // Call the stored procedure. 
      
      List<Object[]> storedProcedureResults = storedProcedure.getResultList();
-System.out.println("VVVV"+storedProcedureResults);
-     // Use Java 8's cool new functional programming paradigm to map the objects from the stored procedure results
      return  (List<Object[]>) storedProcedureResults;
-         //(List<User>) storedProcedureResults.stream().collect(Collectors.toList());
 
   }
 
