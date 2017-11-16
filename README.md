@@ -30,6 +30,7 @@ I investigated using a FULLTEXT mysql search with a FULLTEXT index, but unfortun
 ** --search for equality in the lastname because it will be exact if it exists
 
 ** -- a compound index on lastname, firstname so that the table is searched for the records that have that exact match if it exists, first
+A pkg name should be used with the SP for absoulte correctness according to Oracle' best practices.  I would add that.
 
 I did not optimize for egregious typos.  I would expect this to be too infrequent to matter.  It could be addressed with a more complicated query or as previously mentioned, a denormalized search that proved to be faster.
 The overall idea here is that it is a functional prototype that wants to be as simple as possible while getting reasonable returns.  It probably can be improved in terms of mysql tuning especially with third party tools like Percona server, but may never require it.  
