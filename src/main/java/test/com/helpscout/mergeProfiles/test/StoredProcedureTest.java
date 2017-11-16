@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import com.helpscout.mergeProfiles.model.User;
 import com.helpscout.mergeProfiles.repository.UserRepository;
-import com.helpscout.mergeProfiles.repository.UserRepositoryImpl;
+import com.helpscout.mergeProfiles.repository.UserRepositoryCustomImpl;
 import junit.framework.Assert;
 
 
@@ -24,7 +24,7 @@ public class StoredProcedureTest {
 
 
   @Autowired
-  private UserRepositoryImpl userRepository;
+  private UserRepositoryCustomImpl userRepository;
 
   @Autowired
   private UserRepository userRepo;
