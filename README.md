@@ -9,7 +9,7 @@
 
 ## Objective:  find all duplicate profiles accidentally created by user
 
-The point of the project is to find any first name, last name matches in the db due to accidental duplication. This query is described as needed only occasionally by its documentation.  I therefore do not support a full table index with Solr/ElasticSearch unless it becomes evident that it is necessary. JPA integration within Spring boot provides all the CRUD functionality without any controller code.  A pure REST implmentation like Jersey was also considered.  Although not required here, the extra MVC and extensive DI framework extensions potential would be available with Boot for free.
+The point of the project is to find any first name, last name matches in the db due to accidental duplication. This query is described as needed only occasionally by its documentation.  I therefore do not support a full table index with Solr/ElasticSearch unless it becomes evident that it is necessary. JPA integration within Spring boot provides all the CRUD functionality without any controller code.  A pure REST implmentation like Jersey was also considered.  Although not required here, the extra MVC and extensive DI framework features potential would be available with Boot for free.
 It did come to mind to consider checking for duplicates upon creation to proactively prevent this problem.  It would be possible to prevent potential duplicates at creation, for instance, with a client side validation that ran the query if custom validation found similar entries and presented the user with potential duplicates. 
 
 This is a simple REST API with Spring Boot for ease and rapid development.
