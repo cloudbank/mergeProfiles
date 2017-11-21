@@ -5,7 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.ParameterMode;
 import javax.persistence.PersistenceContext;
 import javax.persistence.StoredProcedureQuery;
-
+@Repository
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
   
   @PersistenceContext
